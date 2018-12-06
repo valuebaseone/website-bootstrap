@@ -1,5 +1,5 @@
 # Waterbear website
-Our website is built with Bootstrap 4 with Sass and Gulp build system with these features:
+Our website is built with Bootstrap 4, Sass and Gulp with these features:
 
 -	Handlebars HTML templates with Panini– Panini is a super simple flat file generator for use with Gulp. It compiles a series of HTML pages using a common layout. These pages can also include HTML partials, external Handlebars helpers, or external data as JSON.
 -	Sass compilation, prefixing with Autoprefixer, and JavaScript concatenation
@@ -22,7 +22,7 @@ To use this template, your computer needs:
 	`npm install -g gulp`
 	Test: run `gulp -v ` in the terminal
 
-** Before moving forward, please ensure you have all of the above installed. ** if so, please open a new terminal window or clear your current window and continue to template installation steps below.
+**Before moving forward, please ensure you have all of the above installed.** If so, please open a new terminal window or clear your current window and continue to template installation steps below.
 
 
 ## Installing:
