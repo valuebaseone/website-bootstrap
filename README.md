@@ -6,6 +6,9 @@ Our website is built with Bootstrap 4, Sass and Gulp with these features:
 -	Built-in BrowserSync server - Will automatically reload your page when files are changed. It also live-injects CSS changes when you save a Sass file. This task runs continuously. Defaults to localhost.
 -	For production builds - CSS compression, JavaScript compression, Image compression
 
+## Hosting / Deployment
+
+We automatically deploy using Netlify: [![Netlify Status](https://api.netlify.com/api/v1/badges/49b8e403-fce3-4b63-9af8-81dc1c10611f/deploy-status)](https://app.netlify.com/sites/waterbearcap/deploys)
 
 ## Requirements
 
