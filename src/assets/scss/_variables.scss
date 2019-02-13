@@ -1,0 +1,37 @@
+//  Table of Contents:
+//
+//   1. Bootstrap font overrides
+//   2. Colors
+//   3. Space unit
+
+// 1. Bootstrap font overrides
+// ---------
+$font-family-sans-serif: "Atlas Grotesk", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+
+$waterbear-blue:           #010155;
+$primary:               $waterbear-blue;
+
+// 2. Colors
+// ---------
+$brand-primary:         #010155 !default; // #010155
+$brand-secondary:       #e20191 !default; // #010155
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
+
+$white        :   #fff;
+$gray         :   #2c3e50;
+$darkgray     :   #95a5a6;
+$dark         :   #2c3e50;
+$notice       :   #3498db;
+$success      :   #1abc9c;
+$alert        :   #e74c3c;
+$border-color :   #ecf0f1;
+$border-color--dark: #bdc3c7;
+$darkblue: #0c3954;
+
+// 3. Space unit
+// ---------
+$base-space-unit:       1em !default;
+$base-radius-unit:      3px !default;

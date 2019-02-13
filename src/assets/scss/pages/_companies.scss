@@ -1,0 +1,69 @@
+// companies tyles
+.companiesbg {
+  background: url("../img/backgrounds/companiesbg.jpg") no-repeat;
+}
+//ourportfolio Styles
+.ourportfolio {
+  padding: 50px 0;
+
+  figure {
+    position: relative;
+    overflow: hidden;
+
+    .bottomlogo {
+      position: absolute;
+      bottom: 0;
+      background: #000;
+      width: 100%;
+      text-align: center;
+      @include transition(opacity 0.61s cubic-bezier(0.39, 0.58, 0.57, 1));
+      height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {}
+    }
+
+    figcaption {
+      opacity: 0;
+      visibility: hidden;
+
+      img {
+        margin: 25px 0;
+      }
+      background: -webkit-linear-gradient(to top, rgba(38, 28, 161, 0.90) 0%, rgba(161, 64, 180,0.90) 100%);
+      background: linear-gradient(to top, rgba(38, 28, 161, 0.90) 0%, rgba(161, 64, 180,0.90) 100%);
+      position: absolute;
+      padding: 8px 15px 15px;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      text-align: center;
+      @include transition(all 0.61s cubic-bezier(0.39, 0.58, 0.57, 1));
+
+      a,
+      h4 {
+        color: #fff;
+        font-size: 1rem;
+        font-weight: normal;
+      }
+
+      p {
+        color: #d2abe6;
+        margin: 20px 0;
+      }
+    }
+
+    &:hover {
+      .bottomlogo {
+        opacity: 0;
+      }
+
+      figcaption {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}

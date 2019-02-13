@@ -1,0 +1,601 @@
+/******Project Name  : Waterbear Capital
+*Table of Content
+* 1-General
+* 2-Bootstrap Reset
+* 3-General Classes
+* 4-Subscribe Section
+* 5-Footer
+* 6-Sub Page Header
+* 7-KeyFrames
+* 8-Homepage
+* 9-Team and Partners
+* 10-Companies
+* 11-About Us
+* 12-Slider
+* 13-Individual Portfolio Detail Page
+*/
+
+// 1-General styles
+
+body,
+html {
+  font-family: $font-family-sans-serif;
+  font-size: 14px;
+  @include breakpoint(small) {
+    font-size: 13px;
+  }
+}
+
+body {
+  height: 100vh;
+}
+
+h2 {
+  color: $brand-primary;
+  font-size: 2.857rem;
+  font-weight: bold;
+  @include breakpoint(small) {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 1.714rem;
+  font-weight: bold;
+  color: $brand-primary;
+  @include breakpoint(small) {
+    font-size: 1.4rem;
+  }
+}
+
+h4 {
+  font-size: 1.21rem;
+  font-weight: bold;
+  color: $brand-primary;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+a {
+  color: $brand-primary;
+
+  &:hover {
+    text-decoration: none;
+    color: darken($brand-primary,15%);
+  }
+}
+// 2-Bootstrap Reset Styles
+.carousel-indicators li {
+  margin: 0;
+  background-color: #4a2a9d;
+}
+
+.text-primary {
+  color: $brand-primary !important;
+}
+
+.border-right {
+  border-color: #dddedf !important;
+}
+
+.form-control {
+  border: solid 1px #e8e8e8;
+  height: calc(2.25rem + 9px);
+  @include placeholder {
+    color: #89949e;
+  }
+
+  &:focus {
+    box-shadow: none;
+    border: 1px solid $brand-primary !important;
+  }
+}
+
+.btn-lg {
+  padding: 0.65rem 2.4rem;
+  font-size: 20px;
+}
+
+// 2-Header styles
+.header1 {
+  position: absolute;
+  top: 0;
+  z-index: 16;
+  width: 100%;
+
+  .navbar-collapse {
+    @include breakpoint(small) {
+      background: $brand-primary;
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+    background: white;
+    border-radius: 0;
+
+    &:hover {
+      background: white;
+    }
+
+    &:focus {
+      outline: 0 auto -webkit-focus-ring-color;
+    }
+  }
+
+  .navbar-toggler-icon {
+    padding: 0.5rem;
+    border: none;
+  }
+
+  .navbar-brand {
+    img {
+      max-width: 170px;
+      padding-left: 25px;
+      @include breakpoint(large) {
+        padding-left: 15px;
+      }
+    }
+  }
+
+  .navbar-nav {
+    &.mainmenu {
+      .nav-item {
+        margin: 0 1rem;
+
+        .nav-link {
+          &:before {
+            content: '';
+            height: 3px;
+            position: absolute;
+            left: 8px;
+            bottom: 18px;
+            background: $pink;
+            width: 0;
+            @include transition(width 0.61s ease-in-out);
+            z-index: -1;
+          }
+
+          &:hover {
+            color: #e6e6e6;
+
+            &:before {
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+
+    &.rightmenu {
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .nav-item {
+      .searchicon {
+        border-right: 1px solid rgba(255, 255, 255, 0.25);
+        padding-right: 1.75rem !important;
+      }
+      margin: 0 0.5rem;
+
+      .nav-link.active {
+        color: #fff;
+
+        &:before {
+          width: 90%;
+        }
+      }
+      @include breakpoint(medium) {
+        margin: 0.5rem 0;
+      }
+
+      .nav-link {
+        color: white;
+        padding: 1rem 0.5rem;
+        font-size: 1.071rem;
+        position: relative;
+        @include transition(color 0.61s ease-in-out);
+      }
+    }
+  }
+  // Search Dropdown Style
+  .searholder {
+    position: fixed;
+    top: -500px;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    width: 100%;
+    height: 350px;
+
+    .closeicon {
+      position: absolute;
+      right: 0;
+      top: -50px;
+      @include transition(transform 0.5s cubic-bezier(.46,.03,.52,.96));
+
+      &:hover {
+        cursor: pointer;
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
+    }
+    @include transition(top 0.5s cubic-bezier(.46,.03,.52,.96));
+    background-color: #fff;
+
+    .searchform {
+      @include center();
+      width: 80%;
+      margin: 0 auto;
+      -webkit-animation-delay: 0.5s;
+      -moz-animation-delay: 0.5s;
+      -o-animation-delay: 0.5s;
+      animation-delay: 0.5s;
+      visibility: hidden;
+
+      .iconholder {
+        position: relative;
+
+        &:after {
+          display: block;
+          content: '';
+          width: 0;
+          height: 2px;
+          background-color: #fff;
+          background-color: #000;
+          -webkit-animation-delay: 0.8s;
+          -moz-animation-delay: 0.8s;
+          -o-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+          visibility: hidden;
+        }
+      }
+
+      .form-control {
+        border: 0;
+        color: #333;
+        font-size: 1.75rem;
+        padding: 1rem;
+        line-height: 46px;
+        height: calc(3rem + 30px);
+
+        &:focus,
+        &:hover {
+          outline: none;
+          border: 0 !important;
+        }
+        @include placeholder {
+          color: #333;
+        }
+      }
+    }
+
+    &.active {
+      top: 0;
+
+      .searchform {
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+        -webkit-animation-duration: 0.7s;
+        animation-duration: 0.7s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        visibility: visible;
+      }
+
+      .iconholder {
+        position: relative;
+
+        &:after {
+          -webkit-animation-name: fadeInGo;
+          animation-name: fadeInGo;
+          -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+          visibility: visible;
+        }
+      }
+    }
+
+    &.newactive {
+      .searchform {
+        -webkit-animation-name: fadeOut;
+        animation-name: fadeOut;
+        -webkit-animation-duration: 0.7s;
+        animation-duration: 0.7s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        visibility: visible;
+      }
+
+      .iconholder {
+        &:after {
+          -webkit-animation-name: fadeOutGo2;
+          animation-name: fadeOutGo2;
+          -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+          visibility: visible;
+          -webkit-animation-delay: 0.1s;
+          -moz-animation-delay: 0.1s;
+          -o-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+        }
+      }
+    }
+  }
+
+}
+
+// 3-General Classes
+.svgicon {
+  max-width: 16px;
+}
+
+.fonticon {
+  font-family: 'Socialico';
+  font-size: 1.857rem;
+  font-style: normal;
+}
+
+.borderhead {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+  z-index: 1;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    bottom: 8px;
+    z-index: -1;
+    width: 100%;
+    background: $purple-light;
+    height: 8px;
+  }
+}
+
+.iconholder {
+  position: relative;
+
+  i,
+  img {
+    position: absolute;
+    right: 16px;
+    top: 20px;
+  }
+}
+
+.narrowrow {
+  margin-right: 6px;
+  margin-left: 6px;
+}
+
+.narrowrow > .col,
+.narrowrow > [class*="col-"] {
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+.smline {
+  background: #b90dac;
+  width: 65px;
+  height: 4px;
+  margin: 30px 0;
+}
+
+
+// 4-Subscribe
+.subscribe {
+  background: #211f55;
+  padding: 60px 0;
+
+  h4 {
+    color: #fff;
+    font-size: 1.78rem;
+    line-height: 36px;
+  }
+
+  .form-group {
+    margin-bottom: 2rem;
+
+    .form-control {
+      border: 0;
+      border-radius: 0;
+      height: calc(2.25rem + 34px);
+      padding: 1.2rem 1rem 1rem;
+      font-size: 1.1rem;
+
+      &:focus,
+      &:hover {
+        border: 0 !important;
+      }
+    }
+  }
+
+  .social-list {
+    li {
+      margin-right: 1rem;
+
+      img{
+        max-width: 16px;
+      }
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+// 5-Footer Style
+.footer1 {
+  background: #f6f7f8;
+  padding: 40px 0;
+  color: #6d808e;
+  font-size: 1.143rem;
+
+  .border-right {
+    @include breakpoint(medium) {
+      border: 0 !important;
+    }
+  }
+
+  h4 {
+    font-size: 1.143rem;
+    margin-bottom: 30px;
+  }
+
+  .footerlogo {
+    max-width: 170px;
+    margin-bottom: 30px;
+  }
+
+  ul {
+    li {
+      color: #6d808e;
+      margin-bottom: 16px;
+      font-size: 1.143rem;
+
+      a {
+        color: #6d808e;
+        @include transition(all 0.61s ease-in-out);
+
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+}
+
+// Sub page header styles
+.innerheader {
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include breakpoint(small) {
+    min-height: 300px;
+  }
+
+  article {
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  h2 {
+    background: #fff;
+    color: $brand-primary;
+    display: inline-block;
+    line-height: normal;
+    padding: 10px 25px;
+  }
+
+  h5 {
+    background: #000;
+    color: #fff;
+    display: inline-block;
+    line-height: normal;
+    padding: 8px 15px;
+    font-size: 1rem;
+    font-family: 'Circular Std Book';
+  }
+}
+
+
+// Keyframes
+@-webkit-keyframes fadeInGo {
+  0% {
+    opacity: 0.1;
+    width: 0;
+  }
+
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+@keyframes fadeInGo {
+  0% {
+    opacity: 0.1;
+    width: 0;
+  }
+
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeOutGo2 {
+  0% {
+    opacity: 0.8;
+    width: 100%;
+  }
+
+  100% {
+    opacity: 0.14;
+    width: 0;
+  }
+}
+@keyframes fadeOutGo2 {
+  0% {
+    opacity: 0.8;
+    width: 100%;
+  }
+
+  100% {
+    opacity: 0.14;
+    width: 0;
+  }
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

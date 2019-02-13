@@ -1,0 +1,137 @@
+/* Homepage Style */
+// banner  Section
+.banner {
+  background-image: url("../img/backgrounds/home_banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 824px;
+  padding: 200px 0;
+  position: relative;
+  background-position: center;
+  @include breakpoint(small) {
+    min-height: 100%;
+  }
+
+  .icondown {
+    position: absolute;
+    @include center();
+    top: auto;
+    bottom: 30px;
+  }
+
+  article {
+    h2 {
+      background: #fff;
+      font-size: 3.57rem;
+      color: $brand-primary;
+      display: inline-block;
+      font-weight: bold;
+      padding: 10px 15px;
+      @include breakpoint(small) {
+        font-size: 2.25rem;
+      }
+    }
+  }
+
+  p {
+    color: #fff;
+    font-size: 1.143rem;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .banner {
+    background-image: url("../img/backgrounds/home_banner@2x.jpg");
+  }
+}
+// ventures  Section
+
+.ventures {
+  background: #f6f7f8;
+  padding: 80px 0;
+
+  article {
+    h2 {
+      line-height: 52px;
+      padding-left: 15px;
+      border-left: 8px solid $brand-primary;
+    }
+  }
+
+  .bottom_color {
+    font-size: 1.286rem;
+    color: $blue;
+
+    span {
+      font-weight: 500;
+      position: relative;
+      border-bottom: 4px solid $purple-light;
+
+      &:after {
+        content: '';
+      }
+    }
+  }
+}
+// blog  Section
+
+.blog {
+  padding: 80px 0;
+
+  figure {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      @include breakpoint(small) {
+        width: 100%;
+      }
+    }
+
+    &:hover {
+      img {
+        opacity: 0.85;
+        @include transform(scale(1.02));
+      }
+    }
+
+    img {
+      @include transition(all 0.61s ease-in-out);
+    }
+
+    figcaption {
+      .tags {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+        background: #fff;
+        text-transform: uppercase;
+        color: $purple-dark;
+      }
+    }
+  }
+}
+// Locate Us Section
+
+.locateus {
+  .addressinfo {
+    padding: 80px;
+    @include breakpoint(medium) {
+      padding: 20px;
+    }
+  }
+
+  .list-v {
+    li {
+      margin-bottom: 30px;
+      display: flex;
+      color: #8b8ba6;
+      font-size: 1.07rem;
+      align-items: center;
+
+      img {
+        margin-right: 15px;
+      }
+    }
+  }
+}

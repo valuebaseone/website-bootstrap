@@ -1,0 +1,115 @@
+.meetmem {
+  background-image: url('../img/backgrounds/meetourmembers.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .banner {
+    background-image: url("../img/backgrounds/meetourmembers@2x.jpg");
+  }
+}
+.partners {
+  background-image: url('../img/backgrounds/ourpartner.jpg');
+  padding: 60px 0;
+
+  h2.borderhead {
+    color: #fff;
+
+    &:before {
+      background: #7f3cdd;
+    }
+  }
+
+  figure {
+    background: rgba(255, 255, 255, 0.10);
+    @include box_shadow_2dp;
+    border-radius: 4px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    @include transition(all 0.61s ease-in-out);
+
+    &:hover {
+      @include box_shadow_3dp;
+    }
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .partners {
+    background-image: url("../img/backgrounds/ourpartner@2x.jpg");
+  }
+}
+
+//ourmanagers
+
+.ourmanagers {
+  padding: 100px 0;
+
+  .owl-nav {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    font-size: 36px;
+    color: #888;
+    @include breakpoint(small) {
+      top: 0;
+    }
+
+    .owl-next,
+    .owl-prev {
+      position: absolute;
+      width: 50px;
+    }
+
+    .owl-prev {
+      left: -50px;
+      @include breakpoint(small) {
+        left: 0;
+      }
+    }
+
+    .owl-next {
+      right: -50px;
+      @include breakpoint(small) {
+        right: 0;
+      }
+    }
+  }
+
+  h2.borderhead {
+    margin-bottom: 40px;
+  }
+
+  figure {
+    img {
+      margin-bottom: 30px;
+    }
+
+    figcaption {
+      ul {
+        li {
+          a {
+            color: #2c2f3c;
+
+            &:hover {
+              color: $brand-primary;
+            }
+          }
+        }
+      }
+
+      h4 {
+        color: #2c2f3c;
+        font-size: 1.286rem;
+        font-family: 'Circular Std Book';
+      }
+
+      p {
+        color: #646773;
+      }
+    }
+  }
+}

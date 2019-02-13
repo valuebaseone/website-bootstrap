@@ -1,0 +1,159 @@
+/* Slider Style */
+
+.midicals_slider {
+  .carousel-inner {
+    overflow: visible;
+  }
+
+  .carousel-indicators {
+    margin-left: 0;
+    list-style: none;
+    padding-left: 160px;
+    width: 50%;
+    bottom: 12px;
+    justify-content: flex-start;
+    @include breakpoint(large) {
+      padding-left: 30px;
+      width: 65%;
+    }
+    @include breakpoint(small) {
+      margin: 0 0 0 25px;
+      padding: 0;
+    }
+
+    li {
+      &.active {
+        background-color: #8348b0;
+        opacity: 1;
+      }
+    }
+
+    .num {
+      background: none;
+      color: #7d65bb;
+      position: absolute;
+      font-size: 1.05rem;
+      z-index: 5;
+      top: -35px;
+      text-indent: 0 !important;
+      font-size: 1.15rem;
+      width: 60px;
+
+      .current {
+        font-weight: bold;
+        color: #a55bde;
+        font-size: 1.45rem;
+      }
+    }
+  }
+
+  .carousel-control-next {
+    opacity: 1;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    @include breakpoint(small) {
+      top: 0;
+    }
+
+    span {
+      background: #000;
+      width: 48px;
+      height: 40px;
+      opacity: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .carousel-caption {
+    background: -webkit-linear-gradient(left, #0f0f8d 0%, #5c0b96 100%);
+    background: linear-gradient(to right, #0f0f8d 0%, #5c0b96 100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 15px 50px 30px 160px;
+    width: 45%;
+    text-align: left;
+    @include breakpoint(large) {
+      padding-left: 30px;
+      width: 65%;
+    }
+    @include breakpoint(small) {
+      padding: 15px;
+      opacity: 0.9;
+    }
+
+    .slider-head {
+      margin-bottom: 20px;
+      position: relative;
+      top: -50px;
+      @include breakpoint(small) {
+        margin-bottom: 10px;
+        top: -15px;
+      }
+    }
+
+    a.l_more {
+      color: #fff;
+      font-size: 1.15rem;
+      font-family: 'Circular Std Book';
+      display: block;
+      font-weight: normal;
+      @include breakpoint(small) {
+        font-size: 1rem;
+      }
+    }
+
+    h2 {
+      font-size: 2.80rem;
+      background: #000;
+      color: #fff;
+      padding: 10px;
+      margin: 0 0 3px;
+      max-width: 280px;
+      display: block;
+      text-align: center;
+      @include text-truncate;
+      @include breakpoint(medium) {
+        font-size: 1.80rem;
+      }
+    }
+
+    h5 {
+      background: #000;
+      color: #fff;
+      padding: 10px;
+      display: inline-block;
+      margin-bottom: 40px;
+      font-weight: normal;
+      font-family: 'Circular Std Book';
+      @include text-truncate;
+      @include breakpoint(small) {
+        margin-bottom: 10px;
+        font-size: 1rem;
+      }
+    }
+
+    blockquote {
+      font-size: 1.25rem;
+      color: #8874ca;
+      margin-bottom: 24px;
+      position: relative;
+      line-height: 30px;
+      font-family: 'Circular Std Book';
+
+      &:before {
+        content: '';
+        background: url("../img/quotes.svg") no-repeat;
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}

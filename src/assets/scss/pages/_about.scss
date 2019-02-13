@@ -1,0 +1,191 @@
+//about us page styles
+.aboutbg {
+  background: url("../img/backgrounds/aboutbg.jpg") no-repeat;
+}
+
+//whoweare styles
+.whoweare {
+  background: url("../img/dots.jpg") no-repeat;
+  padding-top: 100px;
+  @include breakpoint(small) {
+    padding: 30px 0;
+  }
+
+  h3 {
+    color: $pink;
+    font-size: 1.286rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 40px;
+    padding-left: 2rem;
+  }
+
+  h4 {
+    font-size: 1.786rem;
+    color: $brand-primary;
+    font-weight: bold;
+    line-height: 40px;
+    font-family: 'Circular Std Book';
+    padding-left: 2rem;
+  }
+
+  p {
+    color: #84849f;
+    line-height: 28px;
+    font-size: 1.143rem;
+    font-family: 'Circular Std Book';
+  }
+}
+
+// our work styles
+.ourwork {
+  position: relative;
+  padding: 100px 0;
+  @include breakpoint(small) {
+    padding: 30px 0;
+  }
+
+  .workitem {
+    margin-bottom: 15px;
+    overflow: hidden;
+
+    img {
+      @include transition(all 0.61s ease-in-out);
+    }
+
+    &:hover {
+      img {
+        opacity: 0.85;
+        @include transform(scale(1.02));
+      }
+    }
+  }
+
+  h1 {
+    font-size: 14.29rem;
+    color: #f7f7f8;
+    position: absolute;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    @include center(x);
+    top: -30px;
+    @include breakpoint(small) {
+      font-size: 4.5rem;
+      top: 0;
+    }
+  }
+
+  .card {
+    padding: 60px;
+    margin-bottom: 15px;
+    @include breakpoint(small) {
+      padding: 15px;
+    }
+    font-family: 'Circular Std Book';
+    border-radius: 0;
+    border-color: #dcdcdc;
+
+    &.smcard {
+      padding: 10px;
+
+      .card-header {
+        padding-bottom: 0;
+
+        h2 {
+          font-size: 1.429rem;
+          line-height: 30px;
+        }
+      }
+    }
+
+    p {
+      color: #9494a3;
+      font-size: 1.143rem;
+    }
+
+    .card-body {
+      padding-bottom: 0;
+    }
+
+    .card-header {
+      background: none;
+      border: 0;
+
+      h2 {
+        font-size: 2.143rem;
+        position: relative;
+        line-height: 40px;
+        padding-bottom: 20px;
+
+        &:after {
+          height: 2px;
+          content: '';
+          background: $pink;
+          width: 25%;
+          position: absolute;
+          bottom: 0;
+          @include transition(all 0.21s ease-in-out);
+          left: 0;
+        }
+
+        &:hover {
+          &:after {
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
+
+  .stats {
+    h2 {
+      color: #3d3139;
+      font-size: 2.643rem;
+    }
+
+    p {
+      color: #9494a3;
+      margin: 0;
+      font-size: 1.214rem;
+    }
+  }
+}
+
+// contact us styles
+.contactus {
+  padding: 30px 0 100px;
+  @include breakpoint(small) {
+    padding: 30px 0;
+  }
+
+  .c_item {
+    @include breakpoint(small) {
+      margin-bottom: 40px;
+    }
+
+    .mapdiv {
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 1.786rem;
+      font-family: 'Circular Std Book';
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      li {
+        padding: 6px 0;
+        display: flex;
+        color: #7c7c92;
+        font-size: 1.286rem;
+
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+// Our own variabls
+@import "variables";
+
+// Bootstrap styles
+@import "bootstrap/scss/bootstrap";
+
+// Fonts
+@import "fonts";
+
+// Custom mixins
+@import "mixins/mixins";
+
+// Custom settings --
+@import "settings";
+
+// Component specific styles
+@import "components/callout";
+
+
+
+// Helpers
+@import "helpers";
+
+// Site-specific
+@import "custom";
+
+// Homepage
+@import "pages/home";
+
+// Team and Partners
+@import "pages/team_partners";
+
+// companies
+@import "pages/companies";
+
+// About Us
+@import "pages/about";
+
+// Slider
+@import "pages/slider";
+
+// Individual Portfolio Detail Page
+@import "pages/individual_details";
+
+// owl css
+@import "owl/owl.carousel";
+@import "owl/owl.theme.default";
