@@ -6,7 +6,7 @@ Our website is built with Bootstrap 4, Sass and Gulp with these features:
 -	Built-in BrowserSync server - Will automatically reload your page when files are changed. It also live-injects CSS changes when you save a Sass file. This task runs continuously. Defaults to localhost.
 -	For production builds - CSS compression, JavaScript compression, Image compression
 
-## Hosting / Deployment
+## Hosting / deployment
 
 We automatically deploy, using Netlify as our host:
 
@@ -45,7 +45,7 @@ http://localhost:3000
 4.	To create compressed, production-ready assets run `gulp build`. This will delete everything in the dist folder and recreate all of your complied files. Never make updates directly into the dist folder as these files get overridden each time. Note: The dist folder is not kept in source control.
 
 
-## Folder Structure:
+## Folder structure:
 
 - `dist/`: Compiled files. Note: Do not modify anything in this directory. Your changes will be overridden every time you run the build command.
 - `node_modules` Front-end dependencies.
@@ -59,7 +59,7 @@ http://localhost:3000
 - `package.json` Handles the front-end dependencies.
 
 
-## SRC Folder Structure:
+## SRC folder structure:
 
 - `src/assets/scss/components/` This is where custom project components go. Import to app.scss folder.
 - `src/assets/scss/forms/` This is where form specific styles and components will go. Import to app.scss folder.
@@ -70,7 +70,7 @@ http://localhost:3000
 - `src/assets/scss/app.scss` This is where you will import your custom component files. Note: Do not write any scss here – every bit of CSS needs a home, more than likely this will be in components. Anything commented out gets ignored and does not get complied.
 
 
-## Additional Resources:
+## Additional resources:
 - [Sass: Syntactically Awesome Style Sheets](http://sass-lang.com/)
 - [Bootstrap](https://getbootstrap.com/)
 - [Handlebars](http://handlebarsjs.com/)
