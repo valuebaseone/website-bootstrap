@@ -4,10 +4,10 @@
   background-image: url("../img/backgrounds/home_banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 824px;
+  min-height: 700px;
   padding: 200px 0;
   position: relative;
-  background-position: center;
+background-position: 100%;
   @include breakpoint(small) {
     min-height: 100%;
   }
@@ -114,6 +114,9 @@
 // Locate Us Section
 
 .locateus {
+  .homemap{
+    max-height: 460px;
+  }
   .addressinfo {
     padding: 80px;
     @include breakpoint(medium) {

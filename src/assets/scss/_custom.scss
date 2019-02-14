@@ -134,8 +134,9 @@ a {
 
   .navbar-brand {
     img {
-      max-width: 170px;
+      max-width: 180px;
       padding-left: 25px;
+      width: 100%;
       @include breakpoint(large) {
         padding-left: 15px;
       }
@@ -146,25 +147,24 @@ a {
     &.mainmenu {
       .nav-item {
         margin: 0 1rem;
-
+        padding: 0 1rem;
         .nav-link {
+          padding: 1rem 0;
           &:before {
             content: '';
             height: 3px;
             position: absolute;
-            left: 8px;
-            bottom: 18px;
+            left: 0px;
+            bottom: 20px;
             background: $pink;
             width: 0;
             @include transition(width 0.61s ease-in-out);
             z-index: -1;
           }
-
           &:hover {
             color: #e6e6e6;
-
             &:before {
-              width: 90%;
+              width: 100%;
             }
           }
         }
@@ -175,20 +175,35 @@ a {
       align-items: center;
       flex-direction: row;
       justify-content: space-around;
+      .nav-item{
+        .nav-link{
+              padding: 0 0.4rem;
+        }
+      }
     }
 
     .nav-item {
       .searchicon {
         border-right: 1px solid rgba(255, 255, 255, 0.25);
         padding-right: 1.75rem !important;
+        img{
+          max-width: 20px;
+        }
       }
       margin: 0 0.5rem;
-
+      img{
+        max-width: 24px;
+        width: 100%;
+        &:hover{
+          cursor: pointer;
+          opacity: 0.9;
+        }
+      }
       .nav-link.active {
         color: #fff;
 
         &:before {
-          width: 90%;
+          width: 100%;
         }
       }
       @include breakpoint(medium) {
@@ -355,7 +370,7 @@ a {
   &:before {
     content: '';
     position: absolute;
-    left: 4px;
+    left: 2.5px;
     bottom: 8px;
     z-index: -1;
     width: 100%;
@@ -451,7 +466,10 @@ a {
 
   h4 {
     font-size: 1.143rem;
-    margin-bottom: 30px;
+    margin:10px 0 30px;
+    @include breakpoint(small) {
+      margin:10px 0;
+    }
   }
 
   .footerlogo {
