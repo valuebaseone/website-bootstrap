@@ -3,6 +3,13 @@
 .midicals_slider {
   .carousel-inner {
     overflow: visible;
+    .carousel-item{
+      @include breakpoint(small) {
+
+      display: flex;
+flex-direction: column;
+      }
+    }
   }
 
   .carousel-indicators {
@@ -18,7 +25,8 @@
     }
     @include breakpoint(small) {
       margin: 0 0 0 25px;
-      padding: 0;
+    
+      width: 100%;
     }
 
     li {
@@ -86,8 +94,11 @@
       width: 65%;
     }
     @include breakpoint(small) {
-      padding: 15px;
+      padding: 15px 15px 15px 60px;
       opacity: 0.9;
+      width: 100%;
+
+    position: relative;
     }
 
     .slider-head {
@@ -95,8 +106,7 @@
       position: relative;
       top: -50px;
       @include breakpoint(small) {
-        margin-bottom: 10px;
-        top: -15px;
+
       }
     }
 
@@ -136,7 +146,6 @@
       font-family: 'Circular Std Book';
       @include text-truncate;
       @include breakpoint(small) {
-        margin-bottom: 10px;
         font-size: 1rem;
       }
     }

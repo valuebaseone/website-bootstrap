@@ -148,6 +148,10 @@ a {
       .nav-item {
         margin: 0 1rem;
         padding: 0 1rem;
+        @include breakpoint(large) {
+          margin: 0 0.5rem;
+          padding: 0 0.5rem;
+        }
         .nav-link {
           padding: 1rem 0;
           &:before {
