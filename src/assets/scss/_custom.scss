@@ -191,10 +191,11 @@ a {
         border-right: 1px solid rgba(255, 255, 255, 0.25);
         padding-right: 1.75rem !important;
         img{
-          max-width: 20px;
+          max-width: 22px;
         }
       }
       margin: 0 0.5rem;
+
       img{
         max-width: 24px;
         width: 100%;
@@ -212,6 +213,9 @@ a {
       }
       @include breakpoint(medium) {
         margin: 0.5rem 0;
+      }
+      @include breakpoint(small) {
+        margin: 0.5rem 0.5rem 1rem;
       }
 
       .nav-link {
@@ -380,6 +384,9 @@ a {
     width: 100%;
     background: $purple-light;
     height: 8px;
+    @include breakpoint(medium) {
+      height: 5px;
+    }
   }
 }
 

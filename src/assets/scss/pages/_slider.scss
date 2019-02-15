@@ -1,6 +1,7 @@
 /* Slider Style */
 
 .midicals_slider {
+  overflow: hidden;
   .carousel-inner {
     overflow: visible;
     .carousel-item{
@@ -24,8 +25,7 @@ flex-direction: column;
       width: 65%;
     }
     @include breakpoint(small) {
-      margin: 0 0 0 25px;
-    
+      margin: 0 0 0 45px;
       width: 100%;
     }
 
@@ -87,15 +87,15 @@ flex-direction: column;
     left: 0;
     bottom: 0;
     padding: 15px 50px 30px 160px;
-    width: 45%;
+    width: 41.7%;
     text-align: left;
     @include breakpoint(large) {
       padding-left: 30px;
       width: 65%;
     }
     @include breakpoint(small) {
-      padding: 15px 15px 15px 60px;
-      opacity: 0.9;
+          padding: 15px 15px 15px 80px;
+
       width: 100%;
 
     position: relative;
@@ -133,6 +133,7 @@ flex-direction: column;
       @include text-truncate;
       @include breakpoint(medium) {
         font-size: 1.80rem;
+        max-width: 230px;
       }
     }
 
