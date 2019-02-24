@@ -35,24 +35,3 @@ $(".closeicon").click(function() {
     $(".searholder").removeClass('active');
  }, 1200);
 });
-$('.left').hide();
-
-$('#mainslider').on('slid.bs.carousel', function (ev) {
-  var carouselData = $(this).data('bs.carousel');
-  var currentIndex = carouselData.getActiveIndex();
-
-  if (currentIndex >= 1) {
-    $('.left').show();
-  }
-  else {
-    $('.left').hide();
-  }
-
-  if (currentIndex === (carouselData.$items.length-1)) {
-    $('.right').hide();
-    $('.left').show();
-  }
-  else {
-    $('.right').show();
-  }
-})
