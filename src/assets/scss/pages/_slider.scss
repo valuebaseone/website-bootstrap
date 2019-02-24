@@ -67,6 +67,9 @@ flex-direction: column;
       display: flex;
       align-items: center;
       justify-content: center;
+      img{
+            max-width: 24px;
+      }
     }
   }
   .carousel-control-next {
