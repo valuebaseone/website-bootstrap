@@ -51,6 +51,9 @@
 
     img {
       @include transition(all 0.61s ease-in-out);
+      @include breakpoint(small) {
+        width: 100%;
+      }
     }
 
     &:hover {
@@ -166,6 +169,12 @@
 
     .mapdiv {
       margin-bottom: 20px;
+      img{
+        @include breakpoint(small) {
+          width: 100%;
+        }
+      }
+
     }
 
     h3 {
