@@ -11442,6 +11442,9 @@ a:hover {
   align-items: center;
   justify-content: center;
 }
+.midicals_slider .carousel-control span img {
+  max-width: 24px;
+}
 .midicals_slider .carousel-control-next {
   right: 0;
 }

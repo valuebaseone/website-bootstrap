@@ -1,14 +1,22 @@
 // companies tyles
+
 .companiesbg {
   background: url("../img/backgrounds/companiesbg.jpg") no-repeat;
 }
 //ourportfolio Styles
+
 .ourportfolio {
   padding: 50px 0;
 
   figure {
     position: relative;
     overflow: hidden;
+
+    > img {
+      @include breakpoint(small) {
+        width: 100%;
+      }
+    }
 
     .bottomlogo {
       position: absolute;
@@ -40,6 +48,10 @@
       height: 100%;
       bottom: 0;
       text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       @include transition(all 0.61s cubic-bezier(0.39, 0.58, 0.57, 1));
 
       a,
