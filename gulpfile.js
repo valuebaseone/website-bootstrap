@@ -19,6 +19,7 @@ var gulp = require('gulp'),
     runSequence = require('run-sequence'),
     cssnano = require('gulp-cssnano'),
     autoprefixer = require('gulp-autoprefixer');
+    sitemap = require('gulp-sitemap');
 
 
 // ------------ Development Tasks -------------
@@ -125,6 +126,23 @@ gulp.task('clean:dist', function () {
     return del.sync('dist');
 });
 
+// Generate a sitemap from our generated html files.
+gulp.task('generate-sitemap',function () {
+  return gulp.src('dist/**/*.html')
+    .pipe(sitemap({
+      siteUrl: 'https://www.valuebaseone.com',
+      mappings: [{
+        pages: ['**/*'],
+        getLoc(siteUrl, loc, entry) {
+          // Remove the trailing slash if it exists
+          loc.replace(/\/$/, '');
+          // Remove the trailing ".html"
+          return loc.replace(/\.html/, '');
+        }
+      }]
+    }))
+    .pipe(gulp.dest('dist/'));
+});
 
 // ------------ Build Sequence -------------
 // Simply run 'gulp' in terminal to run local server and watch for changes
@@ -133,5 +151,5 @@ gulp.task('default', ['clean:dist', 'font', 'scripts', 'images', 'compile-html',
 // Creates production ready assets in dist folder
 gulp.task('build', function () {
     console.log('Building production ready assets');
-    runSequence('clean:dist', 'sass', ['scripts', 'images', 'font', 'compile-html']);
+    runSequence('clean:dist', 'sass', ['scripts', 'images', 'font', 'compile-html'], 'generate-sitemap');
 });
