@@ -1,4 +1,4 @@
-# Waterbear website
+# Value Base One website
 Our website is built with Bootstrap 4, Sass and Gulp with these features:
 
 -	Handlebars HTML templates with Panini– Panini is a super simple flat file generator for use with Gulp. It compiles a series of HTML pages using a common layout. These pages can also include HTML partials, external Handlebars helpers, or external data as JSON.
