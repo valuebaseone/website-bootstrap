@@ -22,14 +22,17 @@
 <body class="{{body-class}}">
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
 
-    {{>navigation}}
-    {{> body}}
+    {{#if use-navigation-light}}
+        {{>navigation-light}}
+    {{else}}
+        {{>navigation-dark}}
+    {{/if}}
+
+    {{>body}}
 
     {{#ifequal is-document-redirect true}}
         {{>document-redirect-message}}
     {{/ifequal}}
-
-    {{>subscribe}}
 
     {{#if no-footer}}
     {{else}}
