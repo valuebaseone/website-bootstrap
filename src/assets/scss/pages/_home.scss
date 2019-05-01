@@ -5,9 +5,7 @@
 }
 
 .banner {
-  background-image: url("../img/backgrounds/home_banner.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: $primary;
   padding: 100px 0;
   min-height: 700px;
   position: relative;
@@ -76,7 +74,7 @@ overflow: hidden;
     span {
       font-weight: 500;
       position: relative;
-      border-bottom: 4px solid $purple-light;
+      border-bottom: 4px solid $brand-highlight;
 
       &:after {
         content: '';

@@ -8,7 +8,7 @@
 // ---------
 $font-family-sans-serif: "Atlas Grotesk", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 
-$valuebaseone-blue:           #010155;
+$valuebaseone-blue:     #0e024a;
 $primary:               $valuebaseone-blue;
 
 // 2. Colors
@@ -19,6 +19,8 @@ $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
+
+$brand-highlight:       #ffc502;
 
 $white        :   #fff;
 $gray         :   #2c3e50;

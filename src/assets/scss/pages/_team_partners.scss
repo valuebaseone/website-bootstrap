@@ -1,8 +1,5 @@
 .meetmem {
-  background-image: url('../img/backgrounds/meetourmembers.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+    background-color: $primary;
 }
 // @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 //   .banner {
@@ -11,7 +8,7 @@
 // }
 
 .partners {
-  background-image: url('../img/backgrounds/ourpartner.jpg');
+  background-color: $primary;
   padding: 60px 0;
   background-repeat: no-repeat;
   background-size: cover;

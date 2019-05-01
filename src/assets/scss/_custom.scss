@@ -158,11 +158,11 @@ a {
             content: '';
             height: 3px;
             position: absolute;
-            left: 0px;
-            bottom: 20px;
-            background: $pink;
+            left: 0;
+            bottom: 12px;
+            background: $brand-highlight;
             width: 0;
-            @include transition(width 0.61s ease-in-out);
+            @include transition(width 0.21s ease-in-out);
             z-index: -1;
           }
           &:hover {
@@ -378,12 +378,12 @@ a {
   &:before {
     content: '';
     position: absolute;
-    left: 2.5px;
-    bottom: 8px;
+    left: 2px;
+    bottom: 2px;
     z-index: -1;
-    width: 100%;
-    background: $purple-light;
-    height: 8px;
+    width: 99%;
+    background: $brand-highlight;
+    height: 7px;
     @include breakpoint(medium) {
       height: 5px;
     }
@@ -422,7 +422,7 @@ a {
 
 // 4-Subscribe
 .subscribe {
-  background: #211f55;
+  background: $primary;
   padding: 60px 0;
 
   h4 {

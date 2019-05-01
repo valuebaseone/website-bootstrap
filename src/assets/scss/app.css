@@ -10721,7 +10721,7 @@ a:hover {
 }
 
 .subscribe {
-  background: #211f55;
+  background: $primary;
   padding: 60px 0;
 }
 .subscribe h4 {
@@ -10905,7 +10905,6 @@ a:hover {
 }
 /* Homepage Style */
 .banner {
-  background-image: url("../img/backgrounds/home_banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 100px 0;
