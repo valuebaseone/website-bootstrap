@@ -71,7 +71,7 @@ a {
 // 2-Bootstrap Reset Styles
 .carousel-indicators li {
   margin: 0;
-  background-color: #4a2a9d;
+  background-color: $brand-secondary;
 }
 
 .text-primary {
@@ -86,7 +86,7 @@ a {
   border: solid 1px #e8e8e8;
   height: calc(2.25rem + 9px);
   @include placeholder {
-    color: #89949e;
+    color: $brand-secondary;
   }
 
   &:focus {
@@ -115,11 +115,11 @@ a {
 
   .navbar-toggler {
     border: none;
-    background: white;
+    background: $white;
     border-radius: 0;
 
     &:hover {
-      background: white;
+      background:$white;
     }
 
     &:focus {
@@ -413,7 +413,7 @@ a {
 }
 
 .smline {
-  background: #b90dac;
+  background: $brand-secondary;
   width: 65px;
   height: 4px;
   margin: 30px 0;
@@ -422,7 +422,8 @@ a {
 
 // 4-Subscribe
 .subscribe {
-  background: $brand-primary;
+  background: -webkit-linear-gradient(left, lighten($brand-primary, 10%) 0%, $brand-primary 100%);
+  background: linear-gradient(to right, lighten($brand-primary, 10%) 0%, $brand-primary 100%);
   padding: 60px 0;
 
   h4 {

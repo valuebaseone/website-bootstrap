@@ -28,7 +28,8 @@ overflow: hidden;
 
   article {
     h2 {
-      background: $brand-primary;
+      background: -webkit-linear-gradient(left, lighten($brand-primary, 10%) 0%, $brand-primary 100%);
+      background: linear-gradient(to right, lighten($brand-primary, 10%) 0%, $brand-primary 100%);
       font-size: 3.57rem;
       color: #fff;
       display: inline-block;
