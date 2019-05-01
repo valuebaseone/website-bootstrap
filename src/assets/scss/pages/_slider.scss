@@ -31,14 +31,14 @@ flex-direction: column;
 
     li {
       &.active {
-        background-color: #8348b0;
+        background-color: $brand-secondary;
         opacity: 1;
       }
     }
 
     .num {
       background: none;
-      color: #7d65bb;
+      color: $brand-secondary;
       position: absolute;
       font-size: 1.05rem;
       z-index: 5;
@@ -49,7 +49,7 @@ flex-direction: column;
 
       .current {
         font-weight: bold;
-        color: #a55bde;
+        color: $brand-secondary;
         font-size: 1.45rem;
       }
     }
@@ -60,7 +60,7 @@ flex-direction: column;
     opacity: 1;
     top: 0;
     span {
-      background: #000;
+      background: darken($brand-primary, 30%);
       width: 50px;
       height: 50px;
       opacity: 1;
@@ -74,8 +74,6 @@ flex-direction: column;
   }
   .carousel-control-next {
     right: 0;
-
-
   }
   .carousel-control-prev {
     left: 0;
@@ -84,8 +82,8 @@ flex-direction: column;
   }
 
   .carousel-caption {
-    background: -webkit-linear-gradient(left, #0f0f8d 0%, #5c0b96 100%);
-    background: linear-gradient(to right, #0f0f8d 0%, #5c0b96 100%);
+    background: -webkit-linear-gradient(left, lighten($brand-primary, 10%) 0%, $brand-primary 100%);
+    background: linear-gradient(to right, lighten($brand-primary, 10%) 0%, $brand-primary 100%);
     position: absolute;
     left: 0;
     bottom: 0;
@@ -156,7 +154,7 @@ flex-direction: column;
 
     blockquote {
       font-size: 1.25rem;
-      color: #8874ca;
+      color: $white;
       margin-bottom: 24px;
       position: relative;
       line-height: 30px;

@@ -1,5 +1,5 @@
 .meetmem {
-    background-color: $primary;
+    background-color: $brand-primary;
 }
 // @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 //   .banner {
@@ -8,7 +8,7 @@
 // }
 
 .partners {
-  background-color: $primary;
+  background-color: $brand-primary;
   padding: 60px 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,7 +18,7 @@
     color: #fff;
 
     &:before {
-      background: #7f3cdd;
+      background: $brand-secondary;
     }
   }
 

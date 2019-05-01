@@ -5,7 +5,7 @@
 }
 
 .banner {
-  background: $primary;
+  background: #fff;
   padding: 100px 0;
   min-height: 700px;
   position: relative;
@@ -28,9 +28,9 @@ overflow: hidden;
 
   article {
     h2 {
-      background: #fff;
+      background: $brand-primary;
       font-size: 3.57rem;
-      color: $brand-primary;
+      color: #fff;
       display: inline-block;
       font-weight: bold;
       padding: 10px 15px;
@@ -44,7 +44,7 @@ overflow: hidden;
   }
 
   p {
-    color: #fff;
+    color: $brand-primary;
     font-size: 1.143rem;
   }
 }
@@ -63,7 +63,7 @@ overflow: hidden;
     h2 {
       line-height: 52px;
       padding-left: 15px;
-      border-left: 8px solid $brand-highlight;
+      border-left: 8px solid $brand-secondary;
     }
   }
 
@@ -74,7 +74,7 @@ overflow: hidden;
     span {
       font-weight: 500;
       position: relative;
-      border-bottom: 4px solid $brand-highlight;
+      border-bottom: 4px solid $brand-secondary;
 
       &:after {
         content: '';
@@ -116,7 +116,7 @@ overflow: hidden;
         padding: 10px;
         background: #fff;
         text-transform: uppercase;
-        color: $purple-dark;
+        color: $brand-secondary;
       }
     }
   }
