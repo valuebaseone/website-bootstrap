@@ -86,7 +86,7 @@ a {
   border: solid 1px #e8e8e8;
   height: calc(2.25rem + 9px);
   @include placeholder {
-    color: $brand-secondary;
+    color: $brand-primary;
   }
 
   &:focus {
@@ -188,7 +188,7 @@ a {
 
     .nav-item {
       .searchicon {
-        border-right: 1px solid $primary;
+        border-right: 1px solid $brand-primary;
         padding-right: 1.75rem !important;
         img{
           max-width: 22px;
