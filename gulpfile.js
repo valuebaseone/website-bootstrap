@@ -20,6 +20,7 @@ var gulp = require('gulp'),
     cssnano = require('gulp-cssnano'),
     autoprefixer = require('gulp-autoprefixer');
     sitemap = require('gulp-sitemap');
+    htmlmin = require('gulp-htmlmin');
 
 
 // ------------ Development Tasks -------------
@@ -34,7 +35,7 @@ gulp.task('sass', function () {
             outputStyle: 'nested'
         }).on('error', sass.logError))
         .pipe(autoprefixer('last 2 versions'))
-        //.pipe(cssnano()) // Use cssnano to minify CSS
+        .pipe(cssnano())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest("dist/assets/css"))
         .pipe(browserSync.stream());
@@ -51,6 +52,7 @@ gulp.task('compile-html', function () {
             helpers: 'src/helpers/',
             data: 'src/data/'
         }))
+        .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest('dist'));
         console.log('Compiling partials with Panini');
 });
