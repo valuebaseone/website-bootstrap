@@ -21,6 +21,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer');
     sitemap = require('gulp-sitemap');
     htmlmin = require('gulp-htmlmin');
+    removeHtmlComments = require('gulp-remove-html-comments');
 
 
 // ------------ Development Tasks -------------
@@ -53,6 +54,7 @@ gulp.task('compile-html', function () {
             data: 'src/data/'
         }))
         .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(removeHtmlComments())
         .pipe(gulp.dest('dist'));
         console.log('Compiling partials with Panini');
 });
