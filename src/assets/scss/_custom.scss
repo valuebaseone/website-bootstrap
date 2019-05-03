@@ -206,6 +206,7 @@ a {
       }
       .nav-link.active {
         color: $brand-primary;
+        text-shadow: $white 0px 0px 10px;
 
         &:before {
           width: 100%;
@@ -220,6 +221,7 @@ a {
 
       .nav-link {
         color: $brand-primary;
+        text-shadow: $white 0px 0px 3px;
         padding: 1rem 0.5rem;
         font-size: 1.071rem;
         position: relative;
