@@ -1,5 +1,5 @@
 .meetmem {
-    background-color: $brand-primary;
+    background-color: $white;
 }
 // @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 //   .banner {
@@ -53,7 +53,7 @@
       a{
         &:hover{
           svg{
-              fill:$brand-primary;
+              fill:$white;
               g path{
                 fill:$brand-primary;
               }

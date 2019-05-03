@@ -529,8 +529,9 @@ a {
   }
 
   h2 {
-    background: #fff;
-    color: $brand-primary;
+    background: -webkit-linear-gradient(left, lighten($brand-primary, 10%) 0%, $brand-primary 100%);
+    background: linear-gradient(to right, lighten($brand-primary, 10%) 0%, $brand-primary 100%);
+    color: $white;
     display: inline-block;
     line-height: normal;
     padding: 10px 25px;
