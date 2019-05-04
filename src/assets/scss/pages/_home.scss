@@ -6,6 +6,8 @@
 
 .banner {
   background: #fff;
+  background-image: url("../img/backgrounds/eye_storm.jpg");
+  background-size: cover;
   padding: 100px 0;
   min-height: 700px;
   position: relative;
@@ -70,7 +72,7 @@ overflow: hidden;
 
   .bottom_color {
     font-size: 1.286rem;
-    color: $blue;
+    color: $brand-primary;
 
     span {
       font-weight: 500;
@@ -139,7 +141,7 @@ overflow: hidden;
     li {
       margin-bottom: 30px;
       display: flex;
-      color: #8b8ba6;
+      color: lighten($brand-secondary, 30%);
       font-size: 1.07rem;
       align-items: center;
 
