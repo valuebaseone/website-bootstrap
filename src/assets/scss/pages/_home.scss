@@ -33,7 +33,7 @@ overflow: hidden;
       background: -webkit-linear-gradient(left, lighten($brand-primary, 10%) 0%, $brand-primary 100%);
       background: linear-gradient(to right, lighten($brand-primary, 10%) 0%, $brand-primary 100%);
       font-size: 3.57rem;
-      color: #fff;
+      color: $white;
       display: inline-block;
       font-weight: bold;
       padding: 10px 15px;
@@ -117,7 +117,7 @@ overflow: hidden;
         bottom: 0;
         left: 0;
         padding: 10px;
-        background: #fff;
+        background: $white;
         text-transform: uppercase;
         color: $brand-secondary;
       }
@@ -141,7 +141,7 @@ overflow: hidden;
     li {
       margin-bottom: 30px;
       display: flex;
-      color: lighten($brand-secondary, 30%);
+      color: $brand-primary;
       font-size: 1.07rem;
       align-items: center;
 

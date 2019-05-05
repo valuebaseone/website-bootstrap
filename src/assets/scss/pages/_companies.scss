@@ -40,8 +40,8 @@
       img {
         margin: 25px 0;
       }
-      background: -webkit-linear-gradient(to top, rgba(38, 28, 161, 0.90) 0%, rgba(161, 64, 180,0.90) 100%);
-      background: linear-gradient(to top, rgba(38, 28, 161, 0.90) 0%, rgba(161, 64, 180,0.90) 100%);
+      background: -webkit-linear-gradient(to top, lighten($brand-primary, 30%) 0%, $brand-primary 100%);
+      background: linear-gradient(to top, lighten($brand-primary, 30%) 0%, $brand-primary 100%);
       position: absolute;
       padding: 8px 15px 15px;
       width: 100%;
@@ -56,13 +56,14 @@
 
       a,
       h4 {
-        color: #fff;
+        font-weight: 700;
+        color: $brand-secondary;
         font-size: 1rem;
         font-weight: normal;
       }
 
       p {
-        color: #d2abe6;
+        color: $white;
         margin: 20px 0;
       }
     }

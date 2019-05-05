@@ -1,5 +1,8 @@
 .meetmem {
-    background-color: $white;
+  background-color: $white;
+  background-image: url("../img/backgrounds/eye_storm.jpg");
+  background-position-y: 5%;
+  background-size: cover;
 }
 // @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 //   .banner {

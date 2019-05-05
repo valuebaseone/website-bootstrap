@@ -469,7 +469,7 @@ a {
 .footer1 {
   background: #f6f7f8;
   padding: 40px 0;
-  color: #6d808e;
+  color: $brand-primary;
   font-size: 1.143rem;
 
   .border-right {
@@ -493,16 +493,16 @@ a {
 
   ul {
     li {
-      color: #6d808e;
+      color: $brand-primary;
       margin-bottom: 16px;
       font-size: 1.143rem;
 
       a {
-        color: #6d808e;
+        color: $brand-primary;
         @include transition(all 0.61s ease-in-out);
 
         &:hover {
-          color: $blue;
+          color: lighten($brand-primary, 30%);
         }
       }
     }
@@ -541,7 +541,7 @@ a {
 
   h5 {
     background: #000;
-    color: #fff;
+    color: $white;
     display: inline-block;
     line-height: normal;
     padding: 8px 15px;

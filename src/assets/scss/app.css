@@ -10947,7 +10947,7 @@ a:hover {
 .banner article h2 {
   background: #fff;
   font-size: 3.57rem;
-  color: #010155;
+  color: $brand-primary;
   display: inline-block;
   font-weight: bold;
   padding: 10px 15px;
@@ -10968,22 +10968,22 @@ a:hover {
 }
 
 .ventures {
-  background: #f6f7f8;
+  background: $white;
   padding: 80px 0;
 }
 .ventures article h2 {
   line-height: 52px;
   padding-left: 15px;
-  border-left: 8px solid #010155;
+  border-left: 8px solid $brand-primary;
 }
 .ventures .bottom_color {
   font-size: 1.286rem;
-  color: #010155;
+  color: $brand-primary;
 }
 .ventures .bottom_color span {
   font-weight: 500;
   position: relative;
-  border-bottom: 4px solid #fb94e4;
+  border-bottom: 4px solid $brand-secondary;
 }
 .ventures .bottom_color span:after {
   content: "";

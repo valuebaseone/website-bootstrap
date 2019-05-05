@@ -1,6 +1,9 @@
 //about us page styles
 .aboutbg {
-    background-color: $white;
+  background-color: $white;
+  background-image: url("../img/backgrounds/eye_storm.jpg");
+  background-position-y: 5%;
+  background-size: cover;
 }
 
 //whoweare styles
@@ -30,7 +33,7 @@
   }
 
   p {
-    color: #84849f;
+    color: $brand-primary;
     line-height: 28px;
     font-size: 1.143rem;
     font-family: 'Circular Std Book';
@@ -103,7 +106,7 @@
     }
 
     p {
-      color: #9494a3;
+      color: $brand-primary;
       font-size: 1.143rem;
     }
 
@@ -124,7 +127,7 @@
         &:after {
           height: 2px;
           content: '';
-          background: $pink;
+          background: $brand-secondary;
           width: 25%;
           position: absolute;
           bottom: 0;
@@ -148,7 +151,7 @@
     }
 
     p {
-      color: #9494a3;
+      color: $brand-primary;
       margin: 0;
       font-size: 1.214rem;
     }
